@@ -1,0 +1,670 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /*background-image: url("/images/background-poster.png");*/
+    background-color: #447787;
+    background-position: center;
+
+}
+
+.container {
+    width: 1200px;
+    max-height: 2000px;
+    margin: auto;
+    background: #fff;
+
+}
+
+.top-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*header*/
+.container_header {
+    height: 80px;
+    padding: 10px;
+    background-color: #123D4B;
+    display: flex;
+    align-items: center;
+    gap: 130px;
+}
+
+
+.image img{
+    height: 55px;
+    width: auto;
+}
+
+.text h3{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    width: 150px;
+}
+
+.text p{
+    color: rgba(255,255,255,0.55);
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.6;
+    max-width: 520px;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.icon-style{
+    filter: grayscale(100%) brightness(0.5);
+    opacity: 0.8;
+}
+
+
+.icon img{
+    height: 28px;
+    width: 28px;
+    opacity: 0.9;
+}
+
+.button_position button{
+    width: 150px;
+    background: #e53935;
+    color: #fff;
+    border: 0;
+    border-radius: 20px;
+    padding: 10px 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/*nav*/
+.nav{
+    background: #f5f6f7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 60px;
+    border-bottom: 1px solid #e6e7ea;
+}
+
+
+.nav-links{
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.nav-link{
+    position: relative;
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 2px;
+}
+
+.nav-link.active::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 3px;
+    background: #e53935;
+    border-radius: 2px;
+}
+
+
+.nav-actions{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.btn-red{
+    background: #e53935;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.btn-pill{
+    padding: 10px 18px;
+    border-radius: 999px;
+}
+
+
+.days{
+    background: #f5f6f7;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 12px 60px 18px 60px;
+}
+
+.day-chip{
+    border: 1px solid #e2e3e6;
+    background: #fff;
+    color: #333;
+    font-size: 13px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    line-height: 1;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.day-chip:hover{
+    background: #e53935;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.day-chip.active{
+    background: #e53935;
+    border-color: #e53935;
+    color: #fff;
+}
+
+/*nav*/
+/*header*/
+
+/*midle*/
+.badge-new{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e53935;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 10px;
+    border-radius: 6px;
+    z-index: 5;
+    text-transform: uppercase;
+}
+
+
+.movies-grid {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.movie-card {
+    position: relative;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.movie-poster {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.movie-info {
+    padding: 12px;
+}
+
+.movie-title {
+    font-size: 18px;
+    margin: 8px 0 6px 0;
+}
+
+.movie-genre {
+    display: inline-block;
+    font-size: 12px;
+    background: #f1f1f1;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.movie-times {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 6px;
+}
+
+
+.time-card {
+    border-radius: 2px;
+    overflow: hidden;
+    border: 1px solid #e53935;
+    background: #e53935;
+    text-align: center;
+}
+
+.time-card a{
+
+    text-decoration: none;
+}
+
+.time-top {
+    color: #fff;
+    font-weight: 800;
+    font-size: 14px;
+    padding: 10px 6px 8px 6px;
+    line-height: 1;
+}
+
+.time-mid {
+    background: #f2f2f2;
+    color: #666;
+    font-size: 11px;
+    padding: 6px 4px;
+    line-height: 1.1;
+}
+
+.time-mid .dot {
+    margin: 0 4px;
+    color: #999;
+}
+
+
+.time-bot {
+    margin-top: 6px;
+    background: none;
+    color: #777;
+    font-size: 11px;
+    text-align: center;
+}
+
+.time-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.today-btn {
+    background: red;
+    color: #fff;
+    border: none;
+    padding: 7px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 200px;
+
+}
+
+
+/*midle*/
+
+
+/*footer*/
+.container_footer {
+    background-color: #123D4B;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 150px;
+    margin: 0 auto;
+}
+
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 28px 60px;
+}
+
+.footer-logo img {
+    height: 60px;
+    width: auto;
+}
+
+.footer-text {
+    line-height: 1.6;
+}
+
+.footer-text h3{
+    color: #FFFFFF;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1;
+}
+
+
+.text-style {
+    color: rgba(255,255,255,0.75);
+    margin: 0;
+    font-size: 14px;
+}
+
+/* middle */
+.footer-middle {
+    background: #0C3542;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 28px 60px;
+}
+
+.footer-menu h4,
+.footer-payments h4 {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    color: rgba(255,255,255,0.9);
+}
+
+.footer-menu a {
+    display: block;
+    text-decoration: none;
+    color: rgba(255,255,255,0.65);
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+.footer-menu a:hover {
+    color: #fff;
+}
+
+.pay-icons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin: 12px 0;
+}
+
+.pay-icons img {
+    height: 30px;
+    width: 60px;
+}
+
+.small-muted {
+    color: rgba(255,255,255,0.55);
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.6;
+    max-width: 520px;
+}
+
+
+.footer-icons{
+    border-top: 1px solid #fff;
+    background-color: #0C3542;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.icons img{
+    width: 28px;
+    height: 28px;
+    margin-right:14px ;
+    filter: grayscale(100%) brightness(0.5);
+    opacity: 0.8;
+}
+/*/footer /*/
+
+
+/*responsive*/
+/*movie*/
+
+/*movie*/
+
+
+
+
+@media (max-width: 1200px){
+    .container{
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+        box-sizing: border-box;
+    }
+}
+
+
+@media (max-width: 992px){
+
+
+    .container_header{
+        height: auto;
+        gap: 30px;
+        padding: 12px 16px;
+        flex-wrap: wrap;
+    }
+
+    .text h3{
+        width: auto;
+    }
+
+    .icon{
+        flex-wrap: wrap;
+    }
+
+
+    .nav{
+        padding: 12px 16px;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links{
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .nav-actions{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+
+
+
+    .days{
+        padding: 12px 16px 16px 16px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+
+    .movies-grid{
+        padding: 16px 0;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 18px;
+    }
+
+    .movie-poster{
+        height: 320px;
+    }
+
+    .movie-times{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+
+    .container_footer{
+        gap: 40px;
+        flex-wrap: wrap;
+        padding: 20px 16px;
+        box-sizing: border-box;
+    }
+
+    .footer-top{
+        padding: 0;
+        gap: 20px;
+    }
+
+    .footer-middle{
+        padding: 20px 16px;
+        flex-wrap: wrap;
+        gap: 24px;
+        box-sizing: border-box;
+    }
+
+    .footer-menu,
+    .footer-payments{
+        flex: 1;
+        min-width: 260px;
+    }
+
+    .footer-icons{
+        height: auto;
+        padding: 14px 16px;
+        box-sizing: border-box;
+    }
+}
+
+
+@media (max-width: 600px){
+
+    .container_header{
+        display: none;
+    }
+
+
+    .nav{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 12px;
+        gap: 10px;
+    }
+
+    .nav-links{
+        width: 100%;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    .nav-actions{
+        width: 100%;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .btn-pill{
+        padding: 10px 16px;
+    }
+
+
+    .days{
+        padding: 12px 12px 14px 12px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .day-chip{
+        font-size: 12px;
+        padding: 9px 12px;
+    }
+
+    .movies-grid{
+        padding: 12px 0;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .movie-card{
+        border-radius: 10px;
+    }
+
+    .movie-poster{
+        height: 440px;
+    }
+
+    .movie-title{
+        font-size: 16px;
+    }
+
+    .movie-times{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .time-top{
+        font-size: 13px;
+        padding: 9px 6px 7px 6px;
+    }
+
+    /
+
+    .time-mid{
+        font-size: 10px;
+        padding: 6px 4px;
+    }
+
+    .time-bot{
+        font-size: 10px;
+        margin-top: 6px;
+    }
+
+    .badge-new{
+        top: 8px;
+        right: 8px;
+        font-size: 10px;
+        padding: 6px 9px;
+        border-radius: 6px;
+    }
+
+    .container_footer{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 18px 12px;
+    }
+
+    .footer-middle{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        padding: 18px 12px;
+    }
+
+    .pay-icons{
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .small-muted{
+        max-width: 100%;
+    }
+
+    .footer-icons{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 12px;
+        height: auto;
+        padding: 14px 12px;
+    }
+}
+
+
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/*responsive*/
+
+
